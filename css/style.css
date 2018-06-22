@@ -1,0 +1,15 @@
+input[type="text"] {
+  color: red;
+}
+input[type="text"]:focus {
+  background-color: yellow;
+}
+input:checked + label {
+  color: darksalmon;
+}
+input[type="checkbox"]:checked{
+  box-shadow: 0 0 0 3px hotpink;
+}
+input[type="text"]:disabled {
+  background-color: aquamarine;
+}
