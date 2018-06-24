@@ -1,0 +1,39 @@
+.box {
+  width: 800px;
+  border: 1px solid red;
+  height: 50px;
+  max-width: 80%; /*hãy thử thay đổi font-size
+  bằng cách nhấn Ctrl + để thay đổi, ta sẽ thấy width có lớn
+  lên nhưng nó vẫn lớn nhất bằng 80% body*/
+}
+.box p{
+  width: 20%; /*RỘng bằng 20% box, nếu ko đủ chứa thì 
+  tự động xuống dòng nếu height ko đủ, nếu ta có set height
+  cho box ko đủ thì sẽ tràn ra ngoài==> dùng overflow*/
+}
+.cmnr {
+  border: 1px solid blue;
+  font-size: 200%;
+  margin-top: 50px;
+  width: 50%;
+  padding: 10px;
+  height: 150px;
+  overflow: auto;
+
+}
+.contain {
+  border: 1px solid blueviolet;
+  width: 500px;
+  margin-top: 20px;
+  margin-bottom: 30px;  
+
+}
+.hihi {
+  font-size: 2em;
+  margin-top: 50px;
+  border: 1px solid black;
+
+}
+.hihi a{
+  width: 200px;
+}

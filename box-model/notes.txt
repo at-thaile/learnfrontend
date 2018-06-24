@@ -1,0 +1,70 @@
+Block element:theo mặc định, width của block elements
+rộng bằng thẻ block chứa nó( lưu ý là thẻ block chứa nó
+chứ không phải thẻ inline) và height của đủ cao để chứa 
+content của nó
+ví dụ:
+<div>
+  <p>Xin chao toi la quang thai</p>
+</div>
+<p>xin chao toi la le quang thai</p>
+div {
+  width: 500px;
+  
+  border: 1px solid blue;
+}
+p {
+  border: 1px solid red;
+}
+Ở đây : vì div có width = 500px nên thẻ p ở trong nó
+cũng có width = 500px (p là block và div chứa nó cũng
+là block)
+Còn thẻ p không bọc trong div có chiều rộng bằng chiều rộng
+của màn hình chứa nó.
+****
+Tuy nhiên ta cũng có thể chỉ định width,height cho content
+area của block element( contentt area là khu vực nội dung,  như 
+text chứa trong nó), và sử dụng padding,border,margin cho block 
+elements
+Nếu content area vượt quá width của block element chứa nó thì
+sẽ tự động xuống dòng nếu là text,còn nếu height vượt quá height của
+block element thì text sẽ tràn ra khỏi box-model, ta phải sử dụng
+overlow để thêm thanh cuộn ngang hay dọc.
+-box model = width[height]+ border+ padding+ margin
+-Kích thước con số hiển thị khi debug bỏ phần margin
+_____________
+Thiết lập width,height, min-width, min-height, max-width,max-height
+chỉ áp dụng với block element, ko có tác dụng với inline element
+vì inline element chỉ chiếm dụng không gian cần thiết chúng cần
+Khi  ta chỉ định % cho property, width của element sẽ dựa vào
+width của block chứa nó, do đó ta phải chỉ định tường minh width của
+containing block chứa nó
+Còn khi áp dụng % cho height thì cũng như vậy, trừ cái là nếu ta
+không chị định height cho containing block thì height của nó 
+auto cho phù hợp với content
+-min-width,max-height,.. : áp dụng để accommodate(điều tiết) khi có sự thay đổi 
+về font-size: tức là kích thước của text thay đổi.
+
+_____________________________________
+Absolute value : px
+Relative value: %,em,vw
+Auto value: tự chọn giá trị đủ để chứa nội dung
+1em là chiều cao mặc định của default font
+font-size: 150%;
+Khi thiết lập font-size theo % thì nó sẽ lấy kích thước mặc định của
+trình duyệt, ví dụ , chrome quy định font-size = 1em = 16px, do 
+đó nếu set = 150% thì chiều cao text là 1.5*16 = 24px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

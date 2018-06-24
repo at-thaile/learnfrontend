@@ -1,0 +1,7 @@
+Sell: 
+head bao gom:
+meta charset
+meta descriptions
+meta keywords
+___________
+Mỗi trang chỉ nên có 1 thẻ h1 để nhằm tầm quan trọng nhất
