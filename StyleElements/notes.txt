@@ -1,0 +1,27 @@
+1. Specify đơn vị đo (measurments) và color:
+Relative units: percent,em 
+Absolute units: pixed, pointer
+Khi ta sử dụng relavative units thì measurments thay đổi khi user thay đổi 
+font-size của trình duyệt(browser).
+Tuy nhiên, khi ta sử dụng pixed thì nó cũng thay đổi theo 
+screen resolution do đó ta cũng thấy thay đổi theo
+Khi ta áp dụng font-size 100% cho body thì  font-size thiết lập
+100% của font-size browser , thông thường là 16px
+1em bằng với current font size
+1px bằng với 1 single dot của monitor, số lượng dấu chấm trong mỗi inch
+biểu diễn độ phân giải của monitor
+pt: pointer: một pointer  = 1/72 của một inch
+1em  bằng với font-size của font-size thể cha
+1rem: bằng với font-size của cả body
+Ví dụ: 
+  body{
+    font-size: 100%;
+  }
+
+  <div class="font" style="font-size: 50%;">
+    <p style="font-size: 1.5em">Xin chao toi là le quang thai</p>
+    <p style="font-size: 1.5rem">Xin chao toi là le quang thai</p>
+  </div>
+  Ỏ đây text trong p thứ nhấtsẽ có kích thước = 1.5*0.5*16px = 12px vì thẻ cha
+  của nó có font-size = 50% của body
+  Còn thẻ p thứ 2 có font-size dựa vào font-size của body = 1.5.16px = 24px;

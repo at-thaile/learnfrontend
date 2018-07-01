@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../reset.css">
+  <style>
+    * {
+      margin: .5em 1em;
+    }
+    body {
+      border: 1px solid red;
+    }
+    main {
+      border: 2px solid black;
+      padding: 1em;
+    }
+    h1 {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    p {
+      margin-left: 3em;
+    }
+    #copyright {
+      font-size: 80%;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Thí Seanson dfdfdfd</h1>
+    <p class="blue">Octor baere  :class blue</p>
+    <p class="blue">Class blue 2 </p>
+  </main>
+  <footer>
+    <p id="copyright" class="blue right">copy right 2015</p>
+    <p>
+        Ở đây ta thấy, screen ta có width: 1366px,
+        Vì universal selector bị internal type selector ghi đè nên nó chỉ áp dụng 
+        cho thẻ html , do đó chỉ có phần document ảnh hưởng, toàn bộ body cách document margin trên dưới 0.5em và  1em bên trái và phải
+        Kích chuột vào body ta thấy margin: -.5em 1em bị gạch ngang do trong reset.css ta đã thiết lập tất cả element margin 0 nên sẽ override ngoại trừ
+        ta không thiết lập html {margin 0 } nên html bị universal ảnh hưởng
+
+        body margin trái phải 1 + 1 = 2em => kích thước dành cho phần body là 1334 (gồm border,padding và content).nó không margin trái phải gì ở đây
+        Vì body có border trái + phải = 2px  và padding 0 nên phần dành cho content  là 1332px 
+        main bị ảnh hưởng bởi universal selector * vì ta không định nghĩa trong reset.css do đó kích chuột zô thì nó vẫn margin { -.5em 1em}, do đó
+        margin có kích thước width = content body - 2*16 = 1332 -2*16 = 1300px(gồm cả border, padding và content)
+        main có border trái phải 2px, padding trái phải 1em nên content = 1300 - 2*2 - 2*16 = 1264px
+        h1 nằm trong main và ko bị universal selector * vì nó đã ghi đè trong reset.css (xem phần notes.txt để hiểu vì sao ghi đè ), vì h1 margin 0 nên
+        h1 có width = content main - margin = 1264 - 0 = 1264
+        footer nắm trong body và có định nghĩa margin 0 trong reset.css , ta kích chuột vào footer sẽ thấy phần nổi lên margin 0 trong reset.css và bôi đen 
+        chữ footer nên footer có width = content body - 0 margin =  1332 - 0 = 1332, footer có phần dành cho content là 1332 - 0border - 0 padding = 1332
+        p#copyright nằm trong footer và margin 3em, tuy nhiên vì em tích theo font-size và font-size của p#copyright là 80% thẻ cha(body) nên margin được
+        tính lại là 3*0.8*16 (16px là 100% của body)
+        nên có width = contetn footer - margin = 1332 - 3*0.8*16 = 1293.6px
+      
+        là 1332 - 32 = 1330px,        
+    </p>
+  </footer>
+</body>
+</html>
