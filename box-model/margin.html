@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=`, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .a {
+      width: 800px;      
+      border: 1px solid green;  
+      margin: 50px auto;
+    }  
+    .a p {
+      margin: 15px auto;
+      width: 300px;
+    }
+    .b {
+      width: 600px;
+      border: 1px solid red;
+      margin-top: 30px;    
+    }
+    .b p {
+      margin: 15px auto;
+    }
+    /*
+    Margin:
+    margin: 50px 20px; ==>top,bottom: 50, left,right: 20
+    margin: 50px auto: ==>top,bottom: 50, center
+    margin: 50px 20px 30px: top: 50, left+right: 20px, bottom: 30px
+
+    Nếu muốn center một element trong containing block chứa nó tức là ta 
+    muốn nó ở trung tâm của block chứa nó thì ta phải thiết lập width cho
+    nó và margin: x-px auto; 
+    Ví dụ muôn center thẻ box trong body
+    Muốn center thẻ p trong div .a thì ta phải set width cho
+    nó
+    Nếu ta margin-bottom cho 1 element(block hay inline element) và 
+    margin-top cho element dưới nó thì value nhỏ hơn sẽ bị bỏ qua, lấy 
+    giá trị margin lớn nhất
+    */
+  </style>
+</head>
+<body>
+  <div class="a">Xin chao  toi la
+    <p>This element will be center</p>
+  </div>
+  <div class="b">Xin chao 2
+    <i>This element will be center</i>
+  </div>
+</body>
+
+</html>

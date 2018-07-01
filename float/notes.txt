@@ -1,0 +1,9 @@
+-block element trôi từ top-> down của document còn inline element trôi từ left sang right của block element chứa nó
+-Khi một element được float thì nó thoát khỏi dòng chảycủa document, do đó các element theo sau nó sẽ trôi vào trong 
+khoảng trống mà nó để lại, hay nói cách khác 
+ví dụ file index.html vì class .p1 float nên coi như nó không xuất hiện trong flow of document nên .p2 sẽ chiếm lấy vị trí đầu tiên
+ của document còn .p1 thì nó tự do, ko ai ảnh hưởng tới nó hết, mặc định nó sẽ trôi top-left của document, tuy nhiên mặc dù box của
+ .p2 không bị co lại nhưng content area của nó sẽ fill vào phía bên khoảng trống mà .p1 để lại, tiếp nối theo content của .p1
+-Khi float một element thì display của của element đó sẽ là inline tức là width của nó
+tùy chỉnh cho hợp với content mà nó chứa
+-Khi một element được float, nó sẽ trôi trong phạm vi của block element chứa nó mà thôi.

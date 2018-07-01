@@ -54,6 +54,10 @@ Khi thiết lập font-size theo % thì nó sẽ lấy kích thước mặc đ�
 trình duyệt, ví dụ , chrome quy định font-size = 1em = 16px, do 
 đó nếu set = 150% thì chiều cao text là 1.5*16 = 24px
 
+_____________________________________
+
+
+
 
 
 

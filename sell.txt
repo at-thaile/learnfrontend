@@ -5,3 +5,28 @@ meta descriptions
 meta keywords
 ___________
 Mỗi trang chỉ nên có 1 thẻ h1 để nhằm tầm quan trọng nhất
+Để định dạng text đặc biệt trong block element ta nên sử 
+dụng <pre >để viết code như javsrip
+ <blockquote >để trích dẫn một cite
+ <address > để cung cấp thông tin của người sở hữu trang web
+ ___________________
+ Làm thế nào để code inline element để formating text hay
+ identify text:
+ Với việc formating text:<i>, <b>, <sub> <sup>, <br>
+  ta thường dùng các thể i để in nghiêng, b để in đậm,sup,sub để
+  hiển thị trên hay dưới, br để tạo dòng mới, br nên dùng để xuống
+  hàng trong block element chứ không nên dùng để phân cách giữa 
+  các block element
+  Ta nên dùng các thẻ này với no-meaning
+  Với việc identify content(có ý nghĩa nhấn mạnh): ta nên dùng 
+  các thẻ như :
+  -<abbr>,<cite>,<code>,<em>,<q>,<strong>,<var> : các thẻ này nhằm
+  imply(nhấn mạnh nội dung có một ý nghĩa nào đó)
+  ***
+  Tóm lại:
+  - ta nên code inline element bên trong block element và
+  không nên code bắt đầu ở new line
+  -formating text nên dùng với no-meaning
+  -identify content nên dùng để convey(truyền đạt) meaning nào đó
+ _______________________
+ 
