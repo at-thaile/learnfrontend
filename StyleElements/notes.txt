@@ -25,3 +25,48 @@ Ví dụ:
   Ỏ đây text trong p thứ nhấtsẽ có kích thước = 1.5*0.5*16px = 12px vì thẻ cha
   của nó có font-size = 50% của body
   Còn thẻ p thứ 2 có font-size dựa vào font-size của body = 1.5.16px = 24px;
+
+_________________________________
+Lưu ý về độ ưu tiên trong CSS
+
+-inline style > internal style
+
+-inline style > external style
+
+-external style = internal style (cái nào viết trước thì ghi đè lên cái viết sau
+
+<head>
+  <style> 
+  body { 
+   background-color: black; 
+  }
+  </style> 
+  <title>tes test..</title>
+   <link rel="stylesheet" href="styles.css"> 
+</head>
+
+and in styles.css:
+
+body{ background-color:blue; }
+
+since internal style with black background color came before importing external style from
+ styles.css in which background color set as blue, 
+ then the final result will be blue background, and vice versa...
+
+the only reason for universal selector to be external style is that it's written in an external css sheet,
+ but there's a big difference between ordinary external style selector and universal selector,
+this difference is that universal selector can be override by internal style, no matter what's the order of them,
+ the internal style will always win and have bigger strength and apply it's changes,
+  unlike the ordinary external style selector which have the same strength of internal style 
+  and the one who' written last it's styles will be applied (writing order's taken into consideration)
+
+
+Tóm tắt một cái là universal sẽ luôn luôn bị internal style selector ghi đè lên nó bất kể nó 
+đặt trước hay sau
+Hãy xem phần selector.html
+selector trong CSS : dùng để lựa chọn element tác động
+
+universal selector : * : áp dụng tới tất cả HTML elements
+type selector: chỉ gọi tên của element : p,div, a, main, h1,...
+id selector : #content lựa chọn các element có id duy nhất
+class selector : .right lựa chọn các element có cùng class
